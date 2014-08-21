@@ -1,0 +1,54 @@
+#set default encoding using utf8
+defutf8 on
+
+defencoding utf8
+encoding utf8 utf8
+ 
+shell -$SHELL
+
+#set the startup message
+startup_message off
+term linux
+
+termcapinfo xterm|xterms|xs ti@:te=\E[2J
+ 
+defscrollback 10000
+ 
+#hardstatus on
+#caption always "%{= kw}%-w%{= kG}%{+b}[%n %t]%{-b}%{= kw}%+w %=%d %M %0c %{g}%H%{-}"
+caption always "%{=u .G} %-w%<%{=ub .y}%n %t%{=u .G}%+w "
+hardstatus alwaysignore
+hardstatus alwayslastline "%{= .K} [%l]%<%=%{= .W}@%H %=%{= .y} %Y/%m/%d%{= .m} %0c:%s "
+
+vbell off
+ 
+#Keboard binding
+# bind Alt+z to move to previous window
+bindkey ^[z prev
+# bind Alt+x to move to next window
+bindkey ^[x next
+
+# bind Alt`~= to screen0~12
+bindkey "^[`" select 0
+bindkey "^[1" select 1
+bindkey "^[2" select 2
+bindkey "^[3" select 3
+bindkey "^[4" select 4
+bindkey "^[5" select 5
+bindkey "^[6" select 6
+bindkey "^[7" select 7
+bindkey "^[8" select 8
+bindkey "^[9" select 9
+bindkey "^[0" select 10
+bindkey "^[-" select 11
+bindkey "^[=" select 12
+# bind F5 to create a new screen
+bindkey -k k5 screen
+# bind F6 to detach screen session (to background)
+bindkey -k k6 detach
+# bind F7 to kill current screen window
+bindkey -k k7 kill
+# bind F8 to rename current screen window
+bindkey -k k8 title
+
+
