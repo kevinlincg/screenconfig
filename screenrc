@@ -52,3 +52,4 @@ bindkey -k k7 kill
 bindkey -k k8 title
 
 
+termcapinfo xterm* ti@:te@
